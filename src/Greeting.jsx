@@ -1,7 +1,12 @@
-export function Greeting({title}) {
-    return <h1>{title}</h1>
+export function Greeting({ title, name = "user" }) {
+    return (
+    <h1>
+        {title} {name}
+    </h1>
+);
 }
 
-export function UserCard(){
-    return <h1>hola</h1>
+export function UserCard(props) {
+    console.log(props)
+    return <h1>xd</h1>;
 }
