@@ -6,7 +6,7 @@ export function Greeting({ title, name = "user" }) {
     );
 }
 
-export function UserCard({name, amount, married, address}) {
+export function UserCard({name, amount, married, address, greet}) {
     return <div>
         <h1>{name}</h1>
         <h1>${amount}</h1>
