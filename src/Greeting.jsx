@@ -1,5 +1,5 @@
-export function Greeting() {
-    return <h1>componente de react</h1>
+export function Greeting({title}) {
+    return <h1>{title}</h1>
 }
 
 export function UserCard(){
