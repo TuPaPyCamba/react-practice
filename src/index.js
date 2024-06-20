@@ -3,15 +3,20 @@ import ReactDOM from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting";
 import { Product } from "./Product";
 import { Button } from "./Button";
+import { TaskCard, TaskCard2 } from "./Task";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // pasar valores a un component
 root.render(
     <>
-        <Button text='enviar' />
+        <TaskCard value={true}/>
+        <TaskCard2 value={false}/>
+
+        {/* <Button text='enviar' />
         <Button text='hola' />
-        <Button text='' name='ray' number=""/>
+        <Button text='' name='ray' number=""/> */}
+
         {/* <UserCard
             name="robert de nulo"
             amount={2000}
