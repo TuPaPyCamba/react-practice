@@ -18,9 +18,7 @@ root.render(
         <TaskCard2 value={false} />
         {/* <Saludar /> */}
 
-        <Button text='enviar' />
-
-        <input id='input raro' onChange={handleChange}/>
+        <Button text='enviar'/>
 
         {/* <UserCard
             name="robert de nulo"
