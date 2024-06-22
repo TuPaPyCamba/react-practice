@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting";
 import { Product } from "./Product";
@@ -6,6 +6,7 @@ import { Button } from "./Button";
 import { TaskCard, TaskCard2 } from "./Task";
 import { Saludar } from "./Saludar";
 import { Posts } from "./Posts";
+import { users } from "./arreglos";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -13,40 +14,49 @@ const handleChange = (e) => {
     console.log(e.target.value + "...");
 };
 
-const users = [
-    {
-        id: 1,
-        name: "fernando",
-        Image: "https://robohash.org/user1",
-    },
-    {
-        id: 2,
-        name: "roberto",
-        Image: "https://robohash.org/user2",
-    },
-    {
-        id: 3,
-        name: "Lazo",
-        Image: "https://robohash.org/user3",
-    },
-    {
-        id: 4,
-        name: "emi",
-        Image: "https://robohash.org/user4",
-    },
-];
+function Counter(){
+
+    const [counter, setcounter] = useState(10)
+
+    return (
+        <div>
+            
+        </div>
+        // <div>
+        //     <h1>counter : {counter} </h1>
+        //     <button onClick={()=>{
+        //         setcounter(counter + 1)
+        //     }}>
+        //         sumar
+        //     </button>
+        //     <button onClick={()=>{
+        //         setcounter(counter - 1)
+        //     }}>
+        //         restar
+        //     </button>
+        //     <button onClick={()=>{
+        //         setcounter(10)
+        //     }}>
+        //         reiniciar
+        //     </button>
+        // </div>
+    )
+}
+
 // pasar valores a un component
 root.render(
     <>
-        {users.map((user, i) => {
+        <Counter />
+
+        {/* {users.map((user, i) => {
             return (
                 <div key={i}>
                     <h1>{user.name}</h1>
                     <img src={user.Image} />
                 </div>
             );
-        })}
-        
+        })} */}
+
         {/* <Posts /> */}
         {/* <TaskCard value={true} />
         <TaskCard2 value={false} /> */}
