@@ -4,18 +4,23 @@ import { Greeting, UserCard } from "./Greeting";
 import { Product } from "./Product";
 import { Button } from "./Button";
 import { TaskCard, TaskCard2 } from "./Task";
+import { Saludar } from "./Saludar";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const handleChange = (e)=>{
+    console.log(e.target.value + '...')
+}
 // pasar valores a un component
 root.render(
     <>
-        <TaskCard value={true}/>
-        <TaskCard2 value={false}/>
+        <TaskCard value={true} />
+        <TaskCard2 value={false} />
+        {/* <Saludar /> */}
 
-        {/* <Button text='enviar' />
-        <Button text='hola' />
-        <Button text='' name='ray' number=""/> */}
+        <Button text='enviar' />
+
+        <input id='input raro' onChange={handleChange}/>
 
         {/* <UserCard
             name="robert de nulo"
