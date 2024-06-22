@@ -9,9 +9,27 @@ import { Posts } from "./Posts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const handleChange = (e)=>{
-    console.log(e.target.value + '...')
-}
+const handleChange = (e) => {
+    console.log(e.target.value + "...");
+};
+
+const user = [
+    {
+        id: 1,
+        name: "fernando",
+        Image: "https://robohash.org/user1"
+    },
+    {
+        id: 2,
+        name: "roberto",
+        Image: "https://robohash.org/user2"
+    },
+    {
+        id: 3,
+        name: "Lazo",
+        Image: "https://robohash.org/user3"
+    }
+];
 // pasar valores a un component
 root.render(
     <>
