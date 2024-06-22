@@ -13,27 +13,41 @@ const handleChange = (e) => {
     console.log(e.target.value + "...");
 };
 
-const user = [
+const users = [
     {
         id: 1,
         name: "fernando",
-        Image: "https://robohash.org/user1"
+        Image: "https://robohash.org/user1",
     },
     {
         id: 2,
         name: "roberto",
-        Image: "https://robohash.org/user2"
+        Image: "https://robohash.org/user2",
     },
     {
         id: 3,
         name: "Lazo",
-        Image: "https://robohash.org/user3"
-    }
+        Image: "https://robohash.org/user3",
+    },
+    {
+        id: 4,
+        name: "emi",
+        Image: "https://robohash.org/user4",
+    },
 ];
 // pasar valores a un component
 root.render(
     <>
-        <Posts />
+        {users.map((user, i) => {
+            return (
+                <div key={i}>
+                    <h1>{user.name}</h1>
+                    <img src={user.Image} />
+                </div>
+            );
+        })}
+        
+        {/* <Posts /> */}
         {/* <TaskCard value={true} />
         <TaskCard2 value={false} /> */}
         {/* <Saludar /> */}
