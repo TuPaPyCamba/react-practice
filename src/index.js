@@ -5,6 +5,7 @@ import { Product } from "./Product";
 import { Button } from "./Button";
 import { TaskCard, TaskCard2 } from "./Task";
 import { Saludar } from "./Saludar";
+import { Posts } from "./Posts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -14,11 +15,12 @@ const handleChange = (e)=>{
 // pasar valores a un component
 root.render(
     <>
-        <TaskCard value={true} />
-        <TaskCard2 value={false} />
+        <Posts />
+        {/* <TaskCard value={true} />
+        <TaskCard2 value={false} /> */}
         {/* <Saludar /> */}
 
-        <Button text='enviar'/>
+        {/* <Button text='enviar'/> */}
 
         {/* <UserCard
             name="robert de nulo"
