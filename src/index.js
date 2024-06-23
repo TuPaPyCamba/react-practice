@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting";
 import { Product } from "./Product";
@@ -14,13 +14,22 @@ const handleChange = (e) => {
     console.log(e.target.value + "...");
 };
 
-function Counter(){
+function Counter() {
 
-    const [counter, setcounter] = useState(10)
+    const [usuario, setUsuario] = useState('')
+
+    useEffect(() => {
+        console.log('render')
+    }, [])
 
     return (
         <div>
-            
+            <input onChange={e => setUsuario(e.target.value)} />
+            <button onClick={() => {
+                alert('el usuario guardado es: ' + usuario)
+            }}>
+                save
+            </button>
         </div>
         // <div>
         //     <h1>counter : {counter} </h1>
