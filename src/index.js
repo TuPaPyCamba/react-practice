@@ -36,25 +36,23 @@ function Counter() {
             <button onClick={()=> setcounter(counter + 1)}> 
                 incrementar
             </button>
+            <h1>counter : {counter} </h1>
+            <button onClick={()=>{
+                setcounter(counter + 1)
+            }}>
+                sumar
+            </button>
+            <button onClick={()=>{
+                setcounter(counter - 1)
+            }}>
+                restar
+            </button>
+            <button onClick={()=>{
+                setcounter(10)
+            }}>
+                reiniciar
+            </button>
         </div>
-        // <div>
-        //     <h1>counter : {counter} </h1>
-        //     <button onClick={()=>{
-        //         setcounter(counter + 1)
-        //     }}>
-        //         sumar
-        //     </button>
-        //     <button onClick={()=>{
-        //         setcounter(counter - 1)
-        //     }}>
-        //         restar
-        //     </button>
-        //     <button onClick={()=>{
-        //         setcounter(10)
-        //     }}>
-        //         reiniciar
-        //     </button>
-        // </div>
     )
 }
 
@@ -63,23 +61,23 @@ root.render(
     <>
         <Counter />
 
-        {/* {users.map((user, i) => {
+        {users.map((user, i) => {
             return (
                 <div key={i}>
                     <h1>{user.name}</h1>
                     <img src={user.Image} />
                 </div>
             );
-        })} */}
+        })}
 
-        {/* <Posts /> */}
-        {/* <TaskCard value={true} />
-        <TaskCard2 value={false} /> */}
-        {/* <Saludar /> */}
+        <Posts />
+        <TaskCard value={true} />
+        <TaskCard2 value={false} />
+        <Saludar />
 
-        {/* <Button text='enviar'/> */}
+        <Button text='enviar'/>
 
-        {/* <UserCard
+        <UserCard
             name="robert de nulo"
             amount={2000}
             married={true}
@@ -94,6 +92,6 @@ root.render(
             points={[90, 22, 16]}
             address={{ street: "wall street", city: "new york" }}
             greet={function(){alert('cuchaw')}}
-        /> */}
+        />
     </>
 );
