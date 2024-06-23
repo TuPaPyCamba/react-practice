@@ -17,6 +17,7 @@ const handleChange = (e) => {
 function Counter() {
 
     const [usuario, setUsuario] = useState('')
+    const [counter, setcounter] = useState(0)
 
     useEffect(() => {
         console.log('render')
@@ -29,6 +30,11 @@ function Counter() {
                 alert('el usuario guardado es: ' + usuario)
             }}>
                 save
+            </button>
+            <hr />
+            <h1>counter: {counter}</h1>
+            <button onClick={()=> setcounter(counter + 1)}> 
+                incrementar
             </button>
         </div>
         // <div>
